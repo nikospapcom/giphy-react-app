@@ -41,6 +41,11 @@ class App extends React.Component {
     });
   };
 
+  handleDeleteImage = (props) => {
+    let updatedImages = this.state.images.filter((image) => image.id !== props);
+    this.setState({ images: updatedImages });
+  };
+
   render() {
     return (
       <div className="container">
@@ -51,7 +56,10 @@ class App extends React.Component {
         <div className="body">
           <div className="container">
             {!this.state.noData ? (
-              <ImagesList images={this.state.images} />
+              <ImagesList
+                images={this.state.images}
+                handleDeleteImage={this.handleDeleteImage}
+              />
             ) : (
               <AlertMessage text="No results found" />
             )}

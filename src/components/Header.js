@@ -14,7 +14,7 @@ class Header extends React.Component {
     event.preventDefault();
     this.props.handleFormSubmit(this.state.term);
   };
-  handleClear = (event) => {
+  handleClear = () => {
     this.props.handleClearData();
   };
 

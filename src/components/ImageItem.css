@@ -15,3 +15,17 @@
     bottom: 0;
     right: 0;
 }
+
+.actions {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.actions .button {
+    margin: 0 5px;
+}
