@@ -1,6 +1,7 @@
 import React from "react";
 import "./ImageItem.css";
 import DeleteButton from "./DeleteButton";
+import CopyButton from "./CopyButton";
 
 const ImageItem = ({ image, handleDeleteImage }) => {
   return (
@@ -14,6 +15,7 @@ const ImageItem = ({ image, handleDeleteImage }) => {
         />
         <div className="actions">
           <DeleteButton id={image.id} handleDeleteImage={handleDeleteImage} />
+          <CopyButton url={image.bitly_url} />
         </div>
       </div>
     </div>
