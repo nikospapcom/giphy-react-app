@@ -2,9 +2,6 @@ import React from "react";
 
 class CopyButton extends React.Component {
   handleCopy = () => {
-    console.log("handleCopy");
-    console.log(this.props);
-
     this.copyToClipboard(this.props.url);
   };
 
