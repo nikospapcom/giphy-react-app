@@ -34,10 +34,20 @@ class App extends React.Component {
     }
   };
 
+  handleClear = () => {
+    this.setState({
+      images: [],
+      noData: false,
+    });
+  };
+
   render() {
     return (
       <div className="container">
-        <Header handleFormSubmit={this.handleSubmit} />
+        <Header
+          handleFormSubmit={this.handleSubmit}
+          handleClearData={this.handleClear}
+        />
         <div className="body">
           <div className="container">
             {!this.state.noData ? (

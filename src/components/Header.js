@@ -14,6 +14,9 @@ class Header extends React.Component {
     event.preventDefault();
     this.props.handleFormSubmit(this.state.term);
   };
+  handleClear = (event) => {
+    this.props.handleClearData();
+  };
 
   render() {
     return (
@@ -37,6 +40,9 @@ class Header extends React.Component {
               </div>
             </div>
           </form>
+          <button className="button is-danger" onClick={this.handleClear}>
+            Clear
+          </button>
         </div>
       </div>
     );
