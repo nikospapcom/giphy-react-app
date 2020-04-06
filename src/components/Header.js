@@ -16,6 +16,9 @@ class Header extends React.Component {
   };
   handleClear = () => {
     this.props.handleClearData();
+    this.setState({
+      term: ""
+    });
   };
 
   render() {
